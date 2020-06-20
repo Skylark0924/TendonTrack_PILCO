@@ -1,8 +1,11 @@
-# Probabilistic Inference for Learning Control (PILCO)
+# Using PILCO for continuum robots control
 [![Build Status](https://travis-ci.org/nrontsis/PILCO.svg?branch=master)](https://travis-ci.org/nrontsis/PILCO)
 [![codecov](https://codecov.io/gh/nrontsis/PILCO/branch/master/graph/badge.svg)](https://codecov.io/gh/nrontsis/PILCO)
 
-A modern \& clean implementation of the [PILCO](https://ieeexplore.ieee.org/abstract/document/6654139/) Algorithm in `TensorFlow v2`.
+**This is part of the code of [Efficient reinforcement learning control for continuum robots based on Inexplicit Prior Knowledge](https://arxiv.org/abs/2002.11573).
+The main repository of this paper is [Skylark0924/TendonTrack](https://github.com/Skylark0924/TendonTrack).**
+
+An implementation of model-based reinforcement learning control for continuum robots using modern \& clean version of the [PILCO](https://ieeexplore.ieee.org/abstract/document/6654139/) Algorithm in `TensorFlow v2`.
 
 Unlike PILCO's [original implementation](http://mlg.eng.cam.ac.uk/pilco/) which was written as a self-contained package of `MATLAB`, this repository aims to provide a clean implementation by heavy use of modern machine learning libraries.
 
@@ -13,24 +16,16 @@ The core functionality is tested against the original `MATLAB` implementation.
 ## Example of usage
 Before using `PILCO` you have to install it by running:
 ```
-git clone https://github.com/nrontsis/PILCO && cd PILCO
+https://github.com/Skylark0924/TendonTrack_PILCO.git && cd TendonTrack_PILCO
 python setup.py develop
 ```
 It is recommended to install everything in a fresh conda environment with `python>=3.7`
 
 The examples included in this repo use [`OpenAI gym 0.15.3`](https://github.com/openai/gym#installation) and [`mujoco-py 2.0.2.7`](https://github.com/openai/mujoco-py#install-mujoco). Theses dependecies should be installed manually. Then, you can run one of the examples as follows
 ```
-python examples/inverted_pendulum.py
+python examples/gym_tracking_tendon.py
 ```
 
-## Example Extension: Safe PILCO
-As an example of the extensibility of the framework, we include in the folder `safe_pilco_extension` an extension of the standard PILCO algorithm that takes safety constraints (defined on the environment's state space) into account as in [https://arxiv.org/abs/1712.05556](https://arxiv.org/pdf/1712.05556.pdf). The `safe_swimmer_run.py` and `safe_cars_run.py` in the `examples` folder demonstrate the use of this extension.
-
-## Credits:
-
-The following people have been involved in the development of this package:
-* [Nikitas Rontsis](https://github.com/nrontsis)
-* [Kyriakos Polymenakos](https://github.com/kyr-pol/)
 
 ## References
 
