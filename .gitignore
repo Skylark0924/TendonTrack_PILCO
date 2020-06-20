@@ -1,0 +1,9 @@
+build
+.pytest*
+pilco.egg-info
+__pycache__
+*.swp
+octave-workspace
+*.egg
+examples/.ipynb_checkpoints/
+/log/
